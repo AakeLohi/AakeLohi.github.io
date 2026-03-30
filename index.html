@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AakeLohi | Mobile Game Developer</title>
+    <title>Aake Lohilahti | Mobile Game Developer</title>
     <style>
-        /* Base Styles & Dark Theme */
+        /* Base Styles & Light/Blue Theme */
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0ea5e9;
+            --bg-color: #f0f4f8; /* Soft light gray-blue background */
+            --card-bg: #ffffff; /* Crisp white cards */
+            --text-main: #1e293b; /* Dark slate text for readability */
+            --text-muted: #475569;
+            --accent: #0284c7; /* Vibrant solid blue */
+            --accent-hover: #0369a1;
+            --border-color: #e2e8f0;
         }
 
         body {
@@ -28,13 +29,15 @@
         header {
             text-align: center;
             padding: 4rem 1rem 2rem;
-            background: linear-gradient(180deg, #020617 0%, var(--bg-color) 100%);
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5rem;
             letter-spacing: 1px;
+            color: var(--text-main);
         }
 
         header p {
@@ -51,13 +54,21 @@
             padding: 2rem 1rem;
         }
 
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
         /* App Card */
         .app-card {
             background-color: var(--card-bg);
             border-radius: 12px;
             padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid #334155;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
         }
 
         .app-title {
@@ -95,7 +106,7 @@
         .play-store-btn {
             display: inline-block;
             background-color: var(--accent);
-            color: #0f172a;
+            color: #ffffff; /* White text on blue button */
             text-decoration: none;
             padding: 0.8rem 2rem;
             border-radius: 6px;
@@ -115,21 +126,27 @@
             padding: 2rem;
             margin-top: 3rem;
             color: var(--text-muted);
-            border-top: 1px solid #334155;
             font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>AakeLohi</h1>
+        <h1>Aake Lohilahti</h1>
         <p>Independent Mobile Game Developer</p>
     </header>
 
     <main>
+        <h2 class="section-title">Projects</h2>
+        
         <div class="app-card">
-            <h2 class="app-title">KUUSIO</h2>
+            <h3 class="app-title">KUUSIO</h3>
             
             <p class="app-desc">
                 Kuusio on rentouttava sanapeli, jossa etsit sanoja kuusikulmioruudukosta. Muodosta kirjainlaatoilla sanoja, ja yritä käyttää kaikki tason laatat. Muodostettujen sanojen laatat katoavat. Taso läpäistään tyhjentämällä se kokonaan laatoista.
@@ -148,14 +165,14 @@
             </ul>
             
             <div class="btn-container">
-                <a href="#" class="play-store-btn" target="https://play.google.com/store/apps/details?id=com.AakeLo.KUUSIO&hl=fi">Lataa Google Playsta</a>
+                <a href="https://play.google.com/store/apps/details?id=com.AakeLo.KUUSIO&hl=fi" class="play-store-btn" target="_blank">Lataa Google Playsta</a>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Aake Lohilahti All rights reserved.</p>
-        <p style="font-size: 0.8rem; opacity: 0.5;">Ad verification: <a href="/app-ads.txt" style="color: var(--text-muted);">app-ads.txt</a></p>
+        <p>&copy; 2026 Aake Lohilahti. All rights reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Ad verification: <a href="/app-ads.txt">app-ads.txt</a></p>
     </footer>
 
 </body>
