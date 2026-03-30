@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AakeLohi | Mobile Game Developer</title>
+    <style>
+        /* Base Styles & Dark Theme */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            background: linear-gradient(180deg, #020617 0%, var(--bg-color) 100%);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* App Card */
+        .app-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+        }
+
+        .app-title {
+            font-size: 2.2rem;
+            margin: 0 0 1rem 0;
+            color: var(--accent);
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .app-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .features-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Button */
+        .btn-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .play-store-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0f172a;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .play-store-btn:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: var(--text-muted);
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AakeLohi</h1>
+        <p>Independent Mobile Game Developer crafting engaging and fun experiences for Android.</p>
+    </header>
+
+    <main>
+        <div class="app-card">
+            <h2 class="app-title">KUUSIO</h2>
+            
+            <p class="app-desc">
+                Kuusio on rentouttava sanapeli, jossa etsit sanoja kuusikulmioruudukosta. Muodosta kirjainlaatoilla sanoja, ja yritä käyttää kaikki tason laatat. Muodostettujen sanojen laatat katoavat. Taso läpäistään tyhjentämällä se kokonaan laatoista.
+            </p>
+            
+            <p class="app-desc">
+                Tasot vaikeutuvat edetessäsi. Muutaman sanan pulmat muuttuvat sokkeloiksi, joissa joitain laattoja pitää käyttää monta kertaa. Tasojen muodot, värit, ja sanat muuttuvat edetessäsi.
+            </p>
+
+            <ul class="features-list">
+                <li>Uudenlainen kuusikulmioista muodostuva sanaruudukko</li>
+                <li>Loputtomasti tasoja yli 10 300 sanan sanastosta</li>
+                <li>Vaihtuvat teemat, joilla on omat ruudukkomallit, sanojen pituudet ja vaikeustasot</li>
+                <li>Miellyttävät pelilaattojen äänitehosteet</li>
+                <li>Selkeä ja minimalistinen visuaalinen tyyli</li>
+            </ul>
+            
+            <div class="btn-container">
+                <a href="#" class="play-store-btn" target="_blank">Lataa Google Playsta</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aake Lohilahti All rights reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.5;">Ad verification: <a href="/app-ads.txt" style="color: var(--text-muted);">app-ads.txt</a></p>
+    </footer>
+
+</body>
+</html>
