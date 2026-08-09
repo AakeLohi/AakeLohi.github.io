@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,21 +69,24 @@
             font-size: 0.9rem;
         }
 
-        .lang-toggle a {
-            color: var(--text-muted);
+        .lang-toggle button {
+            background: none;
             border: none;
+            color: var(--text-muted);
             padding: 0 0.3rem;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
             transition: color 0.2s ease;
         }
 
-        .lang-toggle a.active {
+        .lang-toggle button.active {
             color: var(--text-main);
             font-weight: 600;
         }
 
-        .lang-toggle a:hover {
+        .lang-toggle button:hover {
             color: var(--accent);
-            border: none;
         }
         
         .lang-separator {
@@ -225,15 +228,20 @@
     <div class="container">
         <nav class="top-bar">
             <div class="lang-toggle">
-                <a href="#" class="active">FI</a> <span class="lang-separator">|</span> <a href="#">EN</a>
+                <button id="btn-fi" class="active" onclick="setLanguage('fi')">FI</button>
+                <span class="lang-separator">|</span>
+                <button id="btn-en" onclick="setLanguage('en')">EN</button>
             </div>
         </nav>
 
         <header>
             <h1>Aake Lohilahti</h1>
-            <div class="subtitle">Independent Mobile Game Developer</div>
+            <div class="subtitle" 
+                 data-fi="Itsenäinen mobiilipelikehittäjä" 
+                 data-en="Independent Mobile Game Developer">Itsenäinen mobiilipelikehittäjä</div>
             <div class="contact-info">
-                Contact: <a href="mailto:aakelo.dev@gmail.com">aakelo.dev@gmail.com</a>
+                <span data-fi="Yhteystiedot:" data-en="Contact:">Yhteystiedot:</span> 
+                <a href="mailto:aakelo.dev@gmail.com">aakelo.dev@gmail.com</a>
             </div>
         </header>
 
@@ -243,34 +251,58 @@
             <article class="project">
                 <div class="project-header">
                     <h2 class="project-title">KUUSIO</h2>
-                    <a href="https://play.google.com/store/apps/details?id=com.AakeLo.KUUSIO&hl=fi" class="project-link btn-green" target="_blank">View on Google Play ↗</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.AakeLo.KUUSIO&hl=fi" 
+                       class="project-link btn-green" 
+                       target="_blank"
+                       data-fi="Näytä Google Playssa ↗"
+                       data-en="View on Google Play ↗">Näytä Google Playssa ↗</a>
                 </div>
 
-                <p>Kuusio on rentouttava sanapeli, jossa etsit sanoja kuusikulmioruudukosta. Peli yhdistää rauhallisen pulmanratkonnan ja minimalistisen visuaalisen tyylin.</p>
+                <p data-fi="Kuusio on rentouttava sanapeli, jossa etsit sanoja kuusikulmioruudukosta. Peli yhdistää rauhallisen pulmanratkonnan ja minimalistisen visuaalisen tyylin."
+                   data-en="Kuusio is a relaxing word puzzle game where you search for words on a hexagonal grid. The game combines peaceful puzzle-solving with a minimalist visual style.">Kuusio on rentouttava sanapeli, jossa etsit sanoja kuusikulmioruudukosta. Peli yhdistää rauhallisen pulmanratkonnan ja minimalistisen visuaalisen tyylin.</p>
 
-                <div class="project-section-title">Pelimekaniikka</div>
-                <p>Muodosta kirjainlaatoilla sanoja, ja yritä käyttää kaikki tason laatat. Muodostettujen sanojen laatat katoavat ruudukolta. Taso läpäistään onnistuneesti tyhjentämällä se kokonaan laatoista.</p>
+                <div class="project-section-title" data-fi="Pelimekaniikka" data-en="Gameplay">Pelimekaniikka</div>
+                <p data-fi="Muodosta kirjainlaatoilla sanoja, ja yritä käyttää kaikki tason laatat. Muodostettujen sanojen laatat katoavat ruudukolta. Taso läpäistään onnistuneesti tyhjentämällä se kokonaan laatoista."
+                   data-en="Form words using letter tiles and try to use every tile on the level. Tiles from completed words disappear from the grid. A level is cleared by completely emptying the board.">Muodosta kirjainlaatoilla sanoja, ja yritä käyttää kaikki tason laatat. Muodostettujen sanojen laatat katoavat ruudukolta. Taso läpäistään onnistuneesti tyhjentämällä se kokonaan laatoista.</p>
 
-                <div class="project-section-title">Eteneminen</div>
-                <p>Tasot vaikeutuvat luonnollisesti edetessäsi. Alun muutaman sanan pulmat muuttuvat vähitellen monimutkaisemmiksi sokkeloiksi, joissa joitain laattoja pitää käyttää useita kertoja. Tasojen muodot, värit ja kohdesanat muuttuvat jatkuvasti pitäen pelikokemuksen tuoreena.</p>
+                <div class="project-section-title" data-fi="Eteneminen" data-en="Progression">Eteneminen</div>
+                <p data-fi="Tasot vaikeutuvat luonnollisesti edetessäsi. Alun muutaman sanan pulmat muuttuvat vähitellen monimutkaisemmiksi sokkeloiksi, joissa joitain laattoja pitää käyttää useita kertoja. Tasojen muodot, värit ja kohdesanat muuttuvat jatkuvasti pitäen pelikokemuksen tuoreena."
+                   data-en="Levels scale in difficulty naturally as you progress. Early few-word puzzles gradually evolve into complex mazes where certain tiles must be reused multiple times. Grid shapes, color schemes, and target words continuously shift to keep the experience fresh.">Tasot vaikeutuvat luonnollisesti edetessäsi. Alun muutaman sanan pulmat muuttuvat vähitellen monimutkaisemmiksi sokkeloiksi, joissa joitain laattoja pitää käyttää useita kertoja. Tasojen muodot, värit ja kohdesanat muuttuvat jatkuvasti pitäen pelikokemuksen tuoreena.</p>
 
-                <div class="project-section-title">Ominaisuudet</div>
+                <div class="project-section-title" data-fi="Ominaisuudet" data-en="Features">Ominaisuudet</div>
                 <ul>
-                    <li>Uudenlainen kuusikulmioista muodostuva sanaruudukko.</li>
-                    <li>Loputtomasti tasoja generoituna yli 10 300 sanan sanastosta.</li>
-                    <li>Vaihtuvat teemat, joilla on omat ruudukkomallit, sanojen pituudet ja vaikeustasot.</li>
-                    <li>Miellyttävät ja rauhoittavat pelilaattojen äänitehosteet.</li>
-                    <li>Selkeä ja minimalistinen visuaalinen tyyli, joka tukee rentouttavaa pelikokemusta.</li>
+                    <li data-fi="Uudenlainen kuusikulmioista muodostuva sanaruudukko."
+                        data-en="Novel hexagonal word grid mechanic.">Uudenlainen kuusikulmioista muodostuva sanaruudukko.</li>
+                    <li data-fi="Loputtomasti tasoja generoituna yli 10 300 sanan sanastosta."
+                        data-en="Endless levels generated from a dictionary of over 10,300 words.">Loputtomasti tasoja generoituna yli 10 300 sanan sanastosta.</li>
+                    <li data-fi="Vaihtuvat teemat, joilla on omat ruudukkomallit, sanojen pituudet ja vaikeustasot."
+                        data-en="Dynamic themes featuring unique grid shapes, word lengths, and difficulty levels.">Vaihtuvat teemat, joilla on omat ruudukkomallit, sanojen pituudet ja vaikeustasot.</li>
+                    <li data-fi="Miellyttävät ja rauhoittavat pelilaattojen äänitehosteet."
+                        data-en="Satisfying and calming sound effects for tile interactions.">Miellyttävät ja rauhoittavat pelilaattojen äänitehosteet.</li>
+                    <li data-fi="Selkeä ja minimalistinen visuaalinen tyyli, joka tukee rentouttavaa pelikokemusta."
+                        data-en="Clean and minimalist visual design supporting a relaxing gameplay loop.">Selkeä ja minimalistinen visuaalinen tyyli, joka tukee rentouttavaa pelikokemusta.</li>
                 </ul>
             </article>
 
         </main>
 
         <footer>
-            <div>&copy; 2026 Aake Lohilahti. All rights reserved.</div>
-            <div>Ad verification: <a href="/app-ads.txt">app-ads.txt</a></div>
+            <div>&copy; 2026 Aake Lohilahti. <span data-fi="Kaikki oikeudet pidätetään." data-en="All rights reserved.">Kaikki oikeudet pidätetään.</span></div>
+            <div><span data-fi="Mainosten vahvistus:" data-en="Ad verification:">Mainosten vahvistus:</span> <a href="/app-ads.txt">app-ads.txt</a></div>
         </footer>
     </div>
 
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            document.getElementById('btn-fi').classList.toggle('active', lang === 'fi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            document.querySelectorAll('[data-fi][data-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+    </script>
 </body>
 </html>
